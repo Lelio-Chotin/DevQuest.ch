@@ -1,0 +1,131 @@
+form {
+    max-width: 502px;
+}
+
+form button[type=submit] {
+    background: var(--c-main);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    color: var(--c-white);
+    font-family: var(--f-family);
+    font-weight: var(--fw-bold);
+    font-size: 1.35rem;
+    padding: 15px;
+    transition: all .35s ease-out;
+}
+
+form button[type=submit]:hover {
+    background: var(--c-secondary);
+    color: var(--c-main);
+    cursor: pointer;
+}
+
+form input[type=text], form input[type=email], form input[type=password] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 2px var(--c-black);
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+}
+
+
+form svg {
+    width: 100%;
+    padding: 0 -20px 0 -20px;
+    margin-bottom: 15px;
+}
+
+form svg.logs {
+    transform: scaleX(-100%);
+}
+
+form a p {
+    display: flex;
+    padding-top: 15px;
+}
+
+form a p .color {
+    color: var(--c-black);
+    transition: all .35s ease-out;
+    margin: 1px 0 0 6px;
+}
+
+form a:hover p .color {
+    color: var(--c-main);
+}
+
+form p.errorMess {
+    margin-bottom: 15px;
+}
+
+form .name {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .name input {
+    width: calc(50% - 10px);
+}
+
+@media (max-width: 1024px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    section.grid {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    form {
+        width: 100%;
+        height: 100vh;
+        padding: 10vh 8% 5vh;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: none;
+        border-radius: 0;
+        background: var(--c-white);
+    }
+
+    form svg image {
+        border: solid 2px var(--c-black);
+        margin-bottom: 2rem;
+    }
+
+    form input[type=text],
+    form input[type=email],
+    form input[type=password] {
+        font-size: 1.2rem;
+        padding: 14px;
+        background: transparent;
+    }
+
+    form button[type=submit] {
+        font-size: 1.2rem;
+        padding: 14px;
+        margin-top: 1rem;
+    }
+
+    form a p {
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    form p.errorMess {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+

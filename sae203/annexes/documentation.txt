@@ -1,0 +1,83 @@
+Documentation d'utilisation du DSL .lio
+=========================================
+
+Le DSL .lio permet de structurer du contenu sous forme de texte brut, et il sera ensuite transformé en HTML via un parser. Voici les différents éléments de syntaxe disponibles dans ce DSL, ainsi que leur utilisation.
+
+1. Liste à puces
+---------------------
+- Pour commencer une liste à puces, utilisez la syntaxe suivante :
+  (
+  Cela ouvre une liste.
+  - Un élément de liste
+  - Un autre élément
+  )
+  Lorsque vous terminez une liste, fermez-la avec une parenthèse fermante `)`.
+
+2. Listes numérotées
+------------------------
+- Pour les listes numérotées, la syntaxe est la même que pour les listes à puces, mais les éléments doivent être précédés d'un nombre suivi d'un point.
+  Exemple :
+  (
+  1. Premier élément
+  2. Deuxième élément
+  )
+
+3. Bloc de code
+-------------------
+- Pour insérer un bloc de code, entourez-le avec trois apostrophes `'''`. Vous pouvez spécifier la langue du code immédiatement après les trois apostrophes d'ouverture (par exemple, `'''php` ou `'''html`).
+  Exemple :
+  '''php
+  <?php echo "Hello, world!"; ?>
+  '''
+  Le bloc de code sera rendu avec un formatage spécifique à la langue indiquée.
+
+4. Texte en gras, italique et souligné
+------------------------------------------
+- Pour du texte en **gras**, encadrez-le avec deux astérisques `**` de part et d'autre.
+  Exemple : **Ceci est du texte en gras**
+- Pour du texte en *italique*, encadrez-le avec une seule astérisque `*` de part et d'autre.
+  Exemple : *Ceci est du texte en italique*
+- Pour du texte _souligné_, utilisez deux underscores `__` de part et d'autre.
+  Exemple : __Ceci est du texte souligné__
+
+5. Liens
+-----------
+- Pour créer un lien, utilisez la syntaxe `[Nom du lien](URL)`.
+  Exemple : [Visitez mon site](http://www.exemple.com)
+- Pour ajouter une image, utilisez la syntaxe `![Description](URL de l'image)`.
+  Exemple : ![Une image](http://www.exemple.com/image.jpg)
+
+6. Citations
+----------------
+- Pour créer une citation, commencez la ligne avec un `>`. Par exemple :
+  > Ceci est une citation.
+  Cela sera rendu comme une citation en HTML.
+
+7. Séparateur horizontal
+---------------------------
+- Pour insérer une ligne horizontale, écrivez trois tirets `---` sur une ligne seule.
+
+8. Titres
+-------------
+- Pour créer un titre de niveau 1, commencez la ligne avec `#` suivi du texte du titre.
+  Exemple : # Titre de niveau 1
+- Pour créer un titre de niveau 2, commencez la ligne avec `##`.
+  Exemple : ## Titre de niveau 2
+- Pour créer un titre de niveau 3, commencez la ligne avec `###`.
+  Exemple : ### Titre de niveau 3
+
+9. Blocs de citations avec catégorie
+----------------------------------------
+- Pour un bloc de citation catégorisé, utilisez la syntaxe `[!type] Texte de la citation`.
+  Exemple : [!info] Ceci est une citation de type "info".
+  Les types possibles sont `info`, `warning`, etc.
+
+10. Texte brut
+-----------------
+- Tout texte qui ne correspond pas à une des syntaxes spécifiées ci-dessus sera traité comme du texte brut et sera rendu en tant que paragraphe dans le HTML final.
+
+---
+
+Exemple d'utilisation complète :
+--------------------------------
+

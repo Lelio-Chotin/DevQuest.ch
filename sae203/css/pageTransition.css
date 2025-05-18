@@ -1,0 +1,63 @@
+.transitionClose,
+.transitionOpen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+.cTrans {
+    width: calc(100% / 3);
+    height: 50%;
+    background: var(--c-black);
+    transform: translateY(0);
+    transition: transform .35s ease;
+}
+
+.transitionClose .cTrans.trUp {
+    transform: translateY(-100%);
+}
+
+.transitionClose .cTrans.trDown {
+    transform: translateY(100%);
+}
+
+.transitionOpen .trUp {
+    animation: toUp .35s ease forwards;
+}
+
+.transitionOpen .trDown {
+    animation: toDown .35s ease forwards;
+}
+
+@keyframes toMiddle {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes toUp {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes toDown {
+    to {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes disappear {
+    99% {
+        background: var(--c-black);
+    }
+    to {
+        background: none;
+    }
+}

@@ -1,0 +1,112 @@
+section.crea {
+    padding: 25vh 12.5% 15vh 12.5%;
+    min-height: 60vh;
+    background: url("../uploads/grid.svg");
+    background-attachment: fixed;
+}
+
+section.crea h1 {
+    font-size: 3.5rem;
+    font-family: var(--f-family);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2rem;
+}
+
+section.crea form {
+    display: flex;
+    flex-direction: column;
+    background: var(--c-white);
+    border: solid 2px var(--c-black);
+    border-bottom: solid 15px var(--c-black);
+    border-radius: 5px;
+    padding: 40px;
+}
+
+section.crea form label {
+    font-size: 1.2rem;
+}
+
+section.crea form input, section.crea form textarea {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding: 5px;
+    border: solid 2px var(--c-black);
+    border-radius: 2px;
+}
+
+section.crea form input::file-selector-button {
+    border: none;
+    border-radius: 2px;
+    background: var(--c-secondary);
+    color: var(--c-main);
+    padding: 4px;
+    cursor: pointer;
+}
+
+section.crea form select {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding: 5px;
+    border: solid 2px var(--c-black);
+    border-radius: 2px;
+    background-color: white;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+section.crea form button {
+    font-size: 1.2rem;
+    background: none;
+    padding: 15px;
+    font-weight: var(--fw-normal);
+    border: solid 2px var(--c-black);
+    border-bottom: solid 8px var(--c-black);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: all .35s ease-out;
+    cursor: pointer;
+}
+
+section.crea form button[type="button"]:hover {
+    border-bottom: solid 2px var(--c-black);
+    margin-top: 6px;
+}
+
+section.crea form button[type="submit"] {
+    background: var(--c-main);
+    color: var(--c-white);
+    border: none;
+    margin: 0;
+    transition: all .35s ease-out;
+}
+
+section.crea form button[type="submit"]:hover {
+    background: var(--ch-main);
+    color: var(--c-white);=
+}
+
+section.crea form h3 {
+    font-size: 1.75rem;
+    font-weight: var(--fw-normal);
+    margin-bottom: 1rem;
+}
+
+section.crea form h4 {
+    font-size: 1.5rem;
+    font-weight: var(--fw-normal);
+}
+
+section.crea form .step, section.crea form .lesson {
+    display: flex;
+    flex-direction: column;
+}
+
+section.crea form .step hr {
+    border: solid 1.5px var(--c-black);
+    margin: 2rem 0 3rem 0;
+}
+
+section.crea form .step:last-child hr {
+    display: none;
+}

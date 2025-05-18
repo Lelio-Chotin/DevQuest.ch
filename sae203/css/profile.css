@@ -1,0 +1,403 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: max(20vh, 175px) 12.5% 50px;
+}
+
+.profile {
+    width: 100%;
+    background: var(--c-white);
+    border: 2px solid var(--c-black);
+    border-radius: 5px;
+    padding: 20px;
+    border-bottom: 15px solid var(--c-black);
+    position: relative;
+}
+
+.banner-container {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.profile img.banner {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+    border: 2px solid var(--c-black);
+    border-radius: 5px;
+}
+
+.profile .profile-info {
+    display: flex;
+    width: 100%;
+}
+
+.profile .profile-info .pfp {
+    position: relative;
+    z-index: 1;
+    width: 20%;
+    aspect-ratio: 1/1;
+    margin: -80px 0 0 60px;
+    background: var(--c-white);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.pfp-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.pfp-container, .banner-container {
+    cursor: pointer;
+}
+
+.profile .profile-info .pfp img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.profile .profile-info .texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 60px 0 0;
+    width: 100%;
+    margin-left: 30px;
+}
+
+.profile .profile-info .texts p #statut-text {
+    cursor: pointer;
+}
+
+.profile .profile-info .texts #statut-select:focus {
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 0;
+    margin-top: 3px;
+}
+
+.profile .profile-info .texts h2 {
+    font-size: 2rem;
+    font-weight: var(--fw-semibold);
+}
+
+.profile .profile-info .texts h2 #age-text {
+    cursor: pointer;
+}
+
+.profile .profile-info .texts h2 input[type="number"]:focus {
+    font-size: 2rem;
+    outline: none;
+}
+
+.profile .profile-info .texts .namexp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile .bio {
+    margin: 20px 60px;
+    cursor: pointer;
+}
+
+.profile .card {
+    width: 100%;
+    padding: 0 60px;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile .card .compte {
+    display: flex;
+    gap: 20px;
+}
+
+.profile .card .compte a:first-child {
+    color: var(--c-white);
+    background: var(--c-main);
+}
+
+.profile .card .compte a:first-child:hover {
+    background: var(--ch-main);
+}
+
+.profile .card a,
+.profile .card .leave {
+    font-weight: var(--fw-semibold);
+    font-size: 1.2rem;
+    background: var(--c-secondary);
+    color: var(--c-main);
+    padding: 25px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 0;
+    transition: all 0.35s ease-out;
+}
+
+.profile .card a:hover,
+.profile .card .leave:hover {
+    background: var(--ch-secondary);
+    color: var(--c-main);
+}
+
+.profile .card a:last-child {
+    margin-right: 40px;
+}
+
+.xp-progress-container {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.xp-progress-bar {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    background-color: var(--c-black);
+    border-radius: 500px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.xp-progress {
+    height: 100%;
+    background-color: var(--c-white);
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 6px;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+    cursor: pointer;
+    transition: all .35s ease-out;
+}
+
+.banner-container:hover .edit-icon,
+.pfp-container:hover .edit-icon {
+    opacity: 1;
+}
+
+.pfp-container .edit-icon {
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.banner-container {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.pfp-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bio textarea {
+    font-size: 1.2rem;
+    border: solid 2px var(--c-black);
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        width: 100%;
+        padding: 0;
+    }
+
+    .profile {
+        width: 100%;
+        padding: 20vh 5% 0;
+        border: none;
+        border-radius: 0;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .profile .profile-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile .profile-info .pfp {
+        width: 40vw;
+        margin: -60px auto 20px;
+    }
+
+    .profile .profile-info .pfp .pfp-container img {
+        border: solid 2px var(--c-black);
+        aspect-ratio: 1/1;
+    }
+
+    .profile .profile-info .texts {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile .profile-info .texts h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .profile .profile-info .texts .namexp {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .profile .profile-info .texts .namexp h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .xp-progress-container {
+        margin: 0;
+    }
+
+    .xp-progress-bar {
+        height: 20px;
+        padding: 3px;
+    }
+
+    .profile .bio {
+        margin: 2rem 0 0 0;
+        width: 100%;
+    }
+
+    .bio h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    #bio-text, #bio-input {
+        font-size: 1.1rem;
+    }
+
+    .profile .card {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        position: relative;
+        padding: 0;
+        margin-top: 10vh;
+    }
+
+    .profile .card .compte {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .profile .card .compte form {
+        width: 100%;
+    }
+
+    .profile .card a,
+    .profile .card .leave,
+    .profile .card form button {
+        width: 100%;
+        max-width: 90%;
+        display: block;
+        text-align: center;
+        font-size: 1.1rem;
+        margin: 0 auto;
+        border-radius: 8px;
+        font-weight: var(--fw-semibold);
+        background: var(--c-secondary);
+        color: var(--c-main);
+        border: none;
+        transition: all 0.35s ease-out;
+    }
+
+    .profile .card a:hover,
+    .profile .card .leave:hover,
+    .profile .card form button:hover {
+        background: var(--ch-secondary);
+        color: var(--c-main);
+    }
+
+    .profile .card .compte a:first-child {
+        background: var(--c-main);
+        color: var(--c-white);
+    }
+
+    .profile .card .compte a:first-child:hover {
+        background: var(--ch-main);
+    }
+
+    .profile .card form button {
+        all: unset;
+        width: 90%;
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 15px;
+        margin: 0 auto;
+        border-radius: 8px;
+        font-weight: var(--fw-semibold);
+        background: var(--c-secondary);
+        color: var(--c-main);
+        display: block;
+        cursor: pointer;
+        transition: all 0.35s ease-out;
+    }
+
+    .profile .card form button:hover {
+        background: var(--ch-secondary);
+        color: var(--c-main);
+    }
+
+    .banner-container img.banner {
+        height: 15vh;
+    }
+
+    .edit-icon {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .pfp-container .edit-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    #statut-select,
+    #age-input {
+        font-size: 1rem;
+    }
+
+    .bio textarea {
+        font-size: 1rem;
+    }
+
+}

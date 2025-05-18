@@ -1,0 +1,448 @@
+.step-block {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: var(--fw-normal);
+}
+
+section.list {
+    width: 100%;
+    min-height: 100vh;
+    padding: 25vh 5% 15vh 5%;
+}
+
+
+nav.lessonsNav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav.lessonsNav .step {
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+
+nav.lessonsNav .step .lesson-button {
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    border: solid 2px var(--c-black);
+    border-left: solid 1.35px var(--c-black);
+    border-right: solid 1.35px var(--c-black);
+    border-bottom: solid 8px var(--c-black);
+    transition: all .3s ease-out;
+}
+
+
+nav.lessonsNav .step .lesson-button.active, .leave {
+    background-color: var(--c-secondary);
+}
+
+nav.lessonsNav .step .lesson-button.validated {
+    background-color: var(--c-main);
+    border: 2px solid var(--c-black);
+    border-bottom: solid 8px var(--c-black);
+}
+
+nav.lessonsNav .step .lesson-button:first-child {
+    border-radius: 5px 0 0 5px;
+    border-left: solid 2px var(--c-black);
+}
+
+nav.lessonsNav .step .lesson-button:last-child {
+    border-radius: 0 5px 5px 0;
+    border-right: solid 2px var(--c-black);
+}
+
+nav.lessonsNav .step .lesson-button:hover {
+    margin-top: 6px;
+    border: solid 2px var(--c-black);
+    background: var(--c-secondary);
+}
+
+
+
+#toggleDrawer {
+    position: fixed;
+    bottom: 10vh;
+    right: 5%;
+    z-index: 995;
+    background: var(--c-main);
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    color: var(--c-white);
+    background: var(--c-main);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .35s ease-out;
+}
+
+
+#lessonDrawer {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background: white;
+    z-index: 999;
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto;
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+#lessonDrawer.active {
+    left: 0;
+}
+
+.step-drawer {
+    margin-bottom: 2rem;
+}
+
+.step-drawer ul {
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+}
+
+.step-drawer li.lesson {
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 6px;
+    border: solid 2px var(--c-black);
+    background-color: var(--c-white);
+    color: var(--c-black);
+    cursor: pointer;
+}
+
+.step-drawer li.active, .step-drawer li.validated.active {
+    background-color: var(--c-secondary);
+    color: var(--c-main);
+    border: solid 0px var(--c-black);
+}
+
+.step-drawer li.validated {
+    background-color: var(--c-main);
+    color: var(--c-white);
+    border: solid 0 var(--c-black);
+}
+
+#lessonOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 998;
+}
+
+#lessonOverlay.active {
+    opacity: 0.6;
+    pointer-events: all;
+}
+
+
+
+
+
+.lio {
+    line-height: 1.2;
+    color: var(--c-black);
+    margin-top: 40px;
+}
+
+.lio #lesson-parsed {
+    margin-bottom: 40px;
+}
+
+.lio * {
+    font-family: var(--f-coursFamily);
+    font-size: 1.2rem;
+}
+
+.lio p {
+    margin: 0.8rem 0;
+}
+
+.lio h1 {
+    font-size: 3.5rem;
+    margin: 4rem 0 1.5rem 0;
+    font-family: var(--f-family);
+    font-weight: var(--fw-bold);
+}
+
+.lio h2 {
+    font-size: 2rem;
+    margin: 3rem 0 2rem 0;
+    font-family: var(--f-family);
+    font-weight: var(--fw-semibold);
+}
+
+.lio h3 {
+    font-size: 1.75rem;
+    margin: 3rem 0 2rem 0;
+    font-family: var(--f-family);
+    font-weight: var(--fw-normal);
+}
+
+.lio br {
+    margin-bottom: 1em;
+    display: block;
+    content: "";
+}
+
+.lio ul {
+    list-style-type: disc;
+    margin-left: 1.5em;
+    padding-left: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.lio li {
+    margin: 0.4em 0;
+    list-style: initial;
+}
+
+.lio code.inline {
+    background: var(--c-secondary);
+    padding: 1px 4px 4px 4px;
+    border-radius: 2px;
+    font-size: 1rem;
+}
+
+.lio blockquote {
+    padding: 1em;
+    margin: 1em 0;
+    color: #555;
+    font-style: italic;
+    background-color: #f5f5f5;
+    border: solid .5px #d6d6d6;
+    border-left: solid 4px var(--c-main);
+    border-radius: 5px;
+    position: relative;
+}
+
+.lio blockquote.warning {
+    border-left: solid 4px var(--c-tv-red);
+}
+
+.lio blockquote.tip {
+    border-left: solid 4px var(--c-tv-pink);
+}
+
+.lio blockquote.remember {
+    color: var(--c-black);
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    font-style: initial;
+    padding: .75em 1em;
+    border-left: solid 4px var(--c-main);
+}
+
+.lio strong {
+    font-weight: var(--fw-bold);
+    color: #000;
+}
+
+.lio em {
+    font-style: italic;
+    color: #444;
+}
+
+.lio u {
+    text-decoration: underline;
+}
+
+.lio a {
+    color: #007acc;
+    text-decoration: none;
+    width: fit-content;
+    padding: 0;
+    display: inline;
+}
+
+.lio a::after {
+    display: none;
+}
+
+.lio a:hover {
+    text-decoration: underline;
+}
+
+.lio img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 3rem 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lio hr {
+    margin-top: 2rem;
+}
+
+.lio ul {
+    display: block;
+    list-style-type: disc;
+    margin-left: 1.5em;
+    padding-left: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.lio li {
+    display: list-item;
+    margin: 0.4em 0;
+}
+
+.lio .code-container {
+    position: relative;
+    border: 1px solid #444;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #1e1e1e;
+    margin: 3rem 40px;
+    z-index: 100;
+}
+
+.lio .code-container .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d2d2d;
+    color: #fff;
+    font-size: 0.75em;
+    padding: 4px 10px 10px 10px;
+}
+
+.lio .code-container .code-lang {
+    text-transform: uppercase;
+    color: var(--c-white);
+    font-size: 1.2rem;
+    font-weight: var(--fw-bold);
+    line-height: 1.5;
+}
+
+.lio .code-container .copy-button {
+    background: #444;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.15em;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: all .3s ease-out;
+}
+
+.lio .code-container .copy-button:hover {
+    background: #666;
+}
+
+
+.lastChap {
+    display: inline;
+}
+
+.lio .code-container pre code.language-arborescence {
+    color: var(--c-white);
+}
+
+.lio table.lio-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: solid 1px var(--c-black);
+    border-radius: 5px;
+    margin: 2rem 0;
+}
+
+.lio table.lio-table th,
+.lio table.lio-table td {
+    border: solid 1px var(--c-black);
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.lio table.lio-table th {
+    background: var(--c-secondary);
+    font-weight: var(--fw-semibold);
+}
+
+
+
+@media (max-width: 1024px) {
+    section.list {
+        padding: 15vh 5% 10vh 5%;
+    }
+
+    .dNav {
+        display: none;
+    }
+
+    #toggleDrawer {
+        display: block;
+    }
+
+    .lio {
+        margin-top: 20px;
+    }
+
+    .lio h1 {
+        font-size: 2.5rem;
+        margin: 2rem 0 1rem 0;
+    }
+
+    .lio h2 {
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem 0;
+    }
+
+    .lio h3 {
+        font-size: 1.3rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+
+    .lio img {
+        max-width: 100%;
+        margin: 2rem 0;
+    }
+
+    .lio .code-container {
+        margin: 2rem 10px;
+    }
+
+    .lio .code-container pre code span {
+        font-size: .8rem;
+        line-height: 80%;
+    }
+
+    .lio .code-container .code-lang {
+        font-size: 1rem;
+    }
+
+    .lio .code-container .copy-button {
+        font-size: 1em;
+        padding: 2px 6px;
+    }
+}
+
+
+
+

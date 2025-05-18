@@ -1,0 +1,202 @@
+section.leaderboard {
+    padding: calc(15vh + 80px) 12.5%;
+    height: fit-content;
+}
+
+section.leaderboard .top {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 80px;
+}
+
+section.leaderboard .top > * {
+    width: 50%;
+}
+
+section.leaderboard .top > p {
+    padding-bottom: 10px;
+}
+
+section.leaderboard .user {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    background: var(--c-white);
+    border: solid 2px var(--c-black);
+    border-bottom: solid 15px var(--c-black);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 10px 20px;
+
+    opacity: 0;
+    scale: .35;
+    transition: all .35s ease-out;
+}
+
+section.leaderboard .user .left {
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+
+section.leaderboard .user .left img.icon {
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: solid 2px var(--c-black);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+section.leaderboard .user .left .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+section.leaderboard .user .left .text span {
+    font-size: 1.5rem;
+    font-weight: var(--fw-normal);
+    line-height: 90%;
+}
+
+section.leaderboard .user .left .text .nom {
+    font-size: 2rem;
+    font-weight: var(--fw-normal);
+    text-transform: capitalize;
+}
+
+section.leaderboard .user .classement {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+section.leaderboard .user .classement span.num {
+    background: var(--c-black);
+    line-height: 0;
+    font-size: 3rem;
+    font-weight: var(--fw-bold);
+    color: var(--c-white);
+    width: 75px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container {
+    margin: 20px auto;
+    text-align: end;
+}
+#search {
+    width: 60%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 2px solid var(--c-black);
+}
+
+.sort-options {
+    margin-top: 10px;
+}
+
+.sort-options button {
+    font-size: 1.2rem;
+    color: var(--c-black);
+    padding: 5px 10px;
+    background: var(--c-white);
+    border: solid 2px var(--c-black);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .35s ease-out;
+}
+
+.sort-options button:hover {
+    color: var(--c-white);
+    background: var(--c-main);
+    border: solid 2px var(--c-main);
+}
+
+
+@media (max-width: 1024px) {
+    section.leaderboard {
+        clip-path: polygon(0 40px, 100% 0, 100% calc(100% - 40px), 0 100%);
+        padding: 40% 5% 20% 5%;
+        position: relative;
+        z-index: 2;
+    }
+
+    section.leaderboard .top {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    section.leaderboard .top h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    section.leaderboard .top > * {
+        width: 100%;
+    }
+
+    section.leaderboard .user {
+        height: 100px;
+    }
+
+    section.leaderboard .user .left .text {
+        padding: 0 10px;
+    }
+
+    section.leaderboard .user .left .text span {
+        font-size: .8rem;
+    }
+
+    section.leaderboard .user .left .text .nom {
+        font-size: 1rem;
+    }
+
+    section.leaderboard .user .left .text .xp {
+        font-size: .8rem;
+    }
+
+    section.leaderboard .user .left {
+        width: 85%;
+    }
+
+    section.leaderboard .user .classement {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    section.leaderboard .user .classement span.num {
+        background: var(--c-black);
+        line-height: 0;
+        font-size: 2rem;
+        font-weight: var(--fw-bold);
+        color: var(--c-white);
+        width: 75px;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-container {
+        margin: 10px auto;
+    }
+
+    #search {
+        width: 100%;
+    }
+}

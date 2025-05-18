@@ -1,0 +1,31 @@
+Lélio Chotin S2C2,
+
+Description du site:
+
+Projet de Site d'Apprentissage du Développement Web: DEVQUEST
+
+Ce projet vise à créer une plateforme interactive et gamifiée pour aider les étudiants en développement web à mieux comprendre les concepts essentiels (HTML, CSS, JavaScript, PHP, MySQL). L'objectif est de rendre l'apprentissage plus ludique, engageant et accessible, en proposant des cours progressifs, des défis stimulants et un système de récompenses motivant.
+
+Les Fonctionnalités Clés:
+Les cours sont organisés sous la forme d’un parcours pédagogique progressif :
+- Chaque cours est divisé en étapes.
+- Chaque étape comprend plusieurs leçons interactives.
+- Chaque étape se termine par un exercice ou mini-projet pour valider les acquis.
+La fin d'une étape rapporte des points d'expérience. Le top 5 des étudiants avec le plus de points apparait sur la homepage.
+
+Un Système de Défis Pour Tester Ses Compétences:
+Des défis en solo ou en équipe, inspirés de hackathons et game jams, permettront de rendre l’expérience plus communautaire.
+(Pour l'instant seulement des exercices "classique" joue le role de Défis)
+
+Les comptes administrateurs (cher@chef.chef mdp: chef) peuvent modifier les lecons (directement depuis ces dernieres) grace au DSL (Domain-Specific Language) créer dans cet objectif (voir documentation.md).
+Les cours peuvent également etre créé a partir de la page Profile des Administrateurs
+
+Une page classement affiche les utilisateurs en fonction de leur XP, avec une barre de recherche et un tri alphabetique
+
+Autre compte : 
+Si vous ne souhaitez pas recreer de compte "utilisateur", ce dernier est disponible:
+
+mail :	johndoe@mail.me
+mdp :	chef
+
+Script pour relancer la bdd : chotinl.24.gremmi.fr/sae203/admin/reset.php
