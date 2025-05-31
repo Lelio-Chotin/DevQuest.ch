@@ -31,6 +31,6 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d'i
 
 ## 👤 Auteur
 
-Lélio Chotin – [@leliochotin](https://github.com/leliochotin)
+Lélio Chotin – [@Lelio-Chotin](https://github.com/Lelio-Chotin)
 
 Étudiant en BUT MMI passionné par le développement web créatif.
