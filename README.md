@@ -17,7 +17,7 @@ DevQuest est une plateforme d'apprentissage du code qui mise sur la progression 
 
 ## 📸 Aperçu
 
-![Capture d'écran de DevQuest](lien_vers_capture.png)
+![Capture d'écran de DevQuest](https://devquest.ch/uploads/DevQuest.jpg)
 
 ## 🛠️ Technologies utilisées
 
