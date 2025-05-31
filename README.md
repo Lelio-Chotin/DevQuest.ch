@@ -23,8 +23,7 @@ DevQuest est une plateforme d'apprentissage du code qui mise sur la progression 
 
 - HTML5 / CSS3
 - JavaScript
-- Framework front-end (précise si tu en utilises un)
-- Backend (précise si applicable)
+- Backend PHP & MySQL
 
 ## 📄 Licence
 
