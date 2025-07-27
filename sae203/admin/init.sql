@@ -2,7 +2,6 @@
 -- version 4.9.6
 -- https://www.phpmyadmin.net/
 --
--- Hôte : lz56lu.myd.infomaniak.com
 -- Généré le :  ven. 09 mai 2025 à 02:19
 -- Version du serveur :  10.6.21-MariaDB-deb11-log
 -- Version de PHP :  7.4.33
